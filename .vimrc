@@ -11,6 +11,7 @@ set hidden
 "	      for Amiga:  s:.vimrc
 "  for MS-DOS and Win32:  $VIM\_vimrc
 "	    for OpenVMS:  sys$login:.vimrc
+let g:netrw_liststyle=3
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -26,9 +27,9 @@ set clipboard=unnamed
 set autochdir
 
 set background=dark
+"colorscheme  wombat256mod "solarized
 syntax on
 set t_Co=256
-colorscheme wombat256mod
 inoremap jj <ESC>
 nnoremap no :noh<CR>
 let mapleader=","
@@ -122,12 +123,14 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here
 Bundle 'c.vim'
-Bundle 'DirDiff.vim'
-Bundle 'taglist.vim'
-Bundle 'minibufexpl.vim'
 Bundle 'ctrlp.vim'
+Bundle 'DirDiff.vim'
+Bundle 'Gist.vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'minibufexpl.vim'
 Bundle 'matchit.zip'
+Bundle 'WebAPI.vim'  
+Bundle 'taglist.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'vimwiki'
 
@@ -163,3 +166,16 @@ filetype plugin indent on     " required
 "
 let loaded_matchit = 1
 let g:Powerline_symbols = 'fancy'
+"" Gist setting
+let g:gist_clip_comand = 'xclip -selection clipboard'
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+let g:gist_browser_command = 'opera %URL% &'
+"" Netrw setting by Charles E. Cambell
+let g:netrw_altv = 1
+let g:netrw_fastbrowse = 2
+let g:netrw_keepdir = 0
+let g:netrw_liststyle = 2
+let g:netrw_retmap = 1
+let g:netrw_silent = 1
+let g:netrw_special_syntax= 1et g:Powerline_symbols = 'fancy'
